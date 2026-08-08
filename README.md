@@ -42,5 +42,8 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Breef is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Breef is an online agency marketplace and payments platform that connects brands with vetted marketing, creative, digital and web agencies. Brands scope a project, receive curated pitches across 50+ project types, then run contracts, milestones and payments through the platform — including Breef(Pay). Founded in New York in 2019 as Curated, rebranded to Breef in 2021, now headquartered in Denver, with roughly 25,000 vetted agencies across 27 countries.
+
+Breef publishes no public API: no developer portal, API reference, OpenAPI or other machine-readable contract, SDK, CLI, webhook catalog, MCP server or agent card was found on any Breef host. See `x-coverage` in `apis.yml` for the probe evidence.
+
+- https://www.breef.com/

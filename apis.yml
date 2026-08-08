@@ -1,17 +1,31 @@
 aid: breef
 name: Breef
-description: 'Breef is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Breef is an online agency marketplace and payments platform that connects
+  brands with vetted marketing, creative, digital and web agencies. Founded in New York
+  in 2019 as Curated and rebranded to Breef in 2021, the company is now headquartered in
+  Denver. Brands scope a project on the platform, receive curated pitches from hand-picked
+  agencies across 50+ project types in days rather than months, and then run contracts,
+  milestones and payments through Breef — including Breef(Pay), its agency-now-pay-later
+  payment product. The network spans roughly 25,000 vetted agencies across 27 countries.
+  Breef is a hosted end-user SaaS product: it publishes no public developer program, API
+  reference, SDK or webhook surface.'
 url: https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/5e4d24d0d11c7440ba421ee3/695fecd6ab2c876120054eb4_855332ca372b2b87e1b97fff133e4083_breef.com.jpg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-08'
 modified: '2026-08-08'
 tags:
 - Company
+- Marketing
+- Advertising
+- Agencies
+- Marketplace
+- Creative Services
+- Procurement
+- Payments
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +34,60 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.breef.com/
+- type: About
+  url: https://www.breef.com/about
+- type: Pricing
+  url: https://www.breef.com/pricing
+- type: SignUp
+  url: https://www.breef.com/onboarding
+- type: Login
+  url: https://projects.breef.com/public/signin
+- type: Support
+  url: https://www.breef.com/contact
+- type: HelpCenter
+  url: https://www.breef.com/faq
+- type: Blog
+  url: https://www.breef.com/breefingroom
+- type: CaseStudies
+  url: https://www.breef.com/case-studies
+- type: Careers
+  url: https://www.breef.com/careers
+- type: TermsOfService
+  url: https://www.breef.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.breef.com/privacy-policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/breef
+- type: DomainSecurity
+  url: security/breef-domain-security.yml
+- type: LLMsTxt
+  url: llms/breef-llms.txt
+x-enrichment:
+  date: '2026-08-08'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Breef ships only an end-user SaaS product — its 483-URL sitemap carries no developer,
+    API, docs or integrations page, no api./developer./docs.breef.com host resolves to a
+    live origin, and the only machine-readable contract on the estate is the Django REST
+    Framework schema behind the customer application at projects.breef.com/api/schema/,
+    which returns 403 "Authentication credentials were not provided" to anonymous callers.
+  evidence:
+  - url: https://www.breef.com/sitemap.xml
+    status: 200
+  - url: https://www.breef.com/openapi.json
+    status: 404
+  - url: https://www.breef.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.breef.com/llms.txt
+    status: 404
+  - url: https://projects.breef.com/api/
+    status: 200
+  - url: https://projects.breef.com/api/schema/
+    status: 403
+  checked: '2026-08-08'

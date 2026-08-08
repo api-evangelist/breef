@@ -1,0 +1,35 @@
+generated: '2026-08-08'
+method: probed
+source: live GET of RFC 8615 well-known paths on every Breef host found in apis.yml
+note: >-
+  No well-known document was served on any Breef host. Every path below returned a
+  404 (the marketing site returns its Webflow 404 page; the application host returns
+  its Next.js 404 shell). Recorded so a later run can detect a change; no WellKnown
+  pointer is wired because nothing was found.
+hosts:
+- host: https://www.breef.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://projects.breef.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

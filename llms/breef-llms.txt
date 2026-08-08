@@ -1,0 +1,50 @@
+# Breef
+
+> Breef is an online agency marketplace and payments platform that connects brands with
+> vetted marketing, creative, digital and web agencies. Brands scope a project, receive
+> curated pitches from hand-picked agencies across 50+ project types, then run contracts,
+> milestones and payments through the platform — including Breef(Pay), its
+> agency-now-pay-later payment product. Founded in New York in 2019 as Curated, rebranded
+> to Breef in 2021, now headquartered in Denver, with roughly 25,000 vetted agencies
+> across 27 countries.
+
+## API surface
+
+Breef publishes **no public API**. There is no developer portal, API reference, OpenAPI or
+other machine-readable contract, SDK, CLI, webhook catalog, MCP server or agent card on any
+Breef host. The product is consumed through the web application at projects.breef.com by
+brands and agencies; the application's own backend is authenticated and undocumented.
+
+## Product
+
+- [How it works](https://www.breef.com/how-it-works): how a brand scopes a project and gets pitches.
+- [Pricing](https://www.breef.com/pricing): Standard (free to scope, $199 on hire), Multiple Projects ($499/yr), Enterprise (custom).
+- [For agencies](https://www.breef.com/for-agencies): free to join and pitch; referral fee on won work.
+- [Case studies](https://www.breef.com/case-studies): brand outcomes on the platform.
+- [FAQ](https://www.breef.com/faq): platform, fees, vetting and payments questions.
+
+## Company
+
+- [About](https://www.breef.com/about): founders, mission, scale and offices.
+- [Breefing Room](https://www.breef.com/breefingroom): the company blog.
+- [Careers](https://www.breef.com/careers)
+- [Contact](https://www.breef.com/contact)
+- [LinkedIn](https://www.linkedin.com/company/breef)
+
+## Accounts
+
+- [Create an account](https://www.breef.com/onboarding)
+- [Sign in](https://projects.breef.com/public/signin)
+
+## Legal
+
+- [Terms of use](https://www.breef.com/terms-of-use)
+- [Privacy policy](https://www.breef.com/privacy-policy)
+
+## API Evangelist profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/apis.yml): the API Evangelist profile for Breef.
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/security/breef-domain-security.yml): probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/well-known/breef-well-known.yml): recorded result of the RFC 8615 discovery probe.
+
+<!-- generated: 2026-08-08 | method: generated | source: apis.yml + repo artifacts + probed breef.com pages -->
