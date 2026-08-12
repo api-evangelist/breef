@@ -1,0 +1,111 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.breef.com/pricing
+docs: https://www.breef.com/faq
+note: >-
+  Breef publishes real, public pricing for the BRAND side of its marketplace — three
+  named tiers with stated prices — plus a stated agency-side referral fee in the FAQ.
+  These are PRODUCT plans for the hosted SaaS marketplace, not API plans: Breef ships
+  no public API, so none of these tiers carries a call quota, key allowance or rate
+  limit. Recorded here because the rating reads published commercial terms, and
+  because an honest "priced product, unpriced API" is a different fact from
+  "no pricing published". Cash-back percentages and the $199/15% fees are quoted
+  verbatim from the provider's own pages.
+currency: USD
+plan_count: 3
+billing_model: subscription + per-placement fee + marketplace referral fee
+plans:
+- name: Standard
+  slug: standard
+  price: 0
+  currency: USD
+  billing_period: none
+  description: >-
+    Free to join, scope a project and receive agency pitches. A one-time $199
+    placement fee is charged only when a brand hires an agency through Breef.
+  ideal_for: One-off projects or first-time users
+  fees:
+  - type: placement
+    amount: 199
+    currency: USD
+    trigger: charged once when the brand hires an agency
+  included:
+  - Custom project scope
+  - Curated agency pitches
+  - Vetted agency match, guaranteed
+  - Expert support from Breef strategists
+  - Quarterly planning calls
+  api_quota: null
+  rate_limits: null
+- name: Multiple Projects
+  slug: multiple-projects
+  price: 499
+  currency: USD
+  billing_period: year
+  description: >-
+    Annual subscription for brands running three or more agency projects a year,
+    adding cash back on agency spend and a single Breef MSA covering every agency.
+  ideal_for: Brands who work with 3 or more agencies per year
+  included:
+  - Tailored project scoping
+  - 6-8 curated pitches in under 5 days
+  - Guided support from Breef strategists
+  - Quarterly planning calls
+  - Vetted agency match, guaranteed
+  - 3%-5% cash back on all agency spend
+  - One contract (Breef MSA) covers all agencies
+  overage: null
+  api_quota: null
+  rate_limits: null
+- name: Enterprise
+  slug: enterprise
+  price: null
+  price_display: Custom
+  currency: USD
+  billing_period: custom
+  description: >-
+    Custom-priced tier for large brands running multiple agencies per year, with
+    5% cash back on agency spend and a single Breef MSA covering all agencies.
+  ideal_for: Large brands who work with multiple agencies per year
+  included:
+  - Custom project scopes
+  - Curated agency pitches
+  - Expert support from Breef strategists
+  - Quarterly planning calls
+  - Vetted agency match, guaranteed
+  - 5% cash back on all agency spend
+  - One contract (Breef MSA) covers all agencies
+  contact_sales: https://www.breef.com/demo
+  api_quota: null
+  rate_limits: null
+cash_back:
+  source: https://www.breef.com/pricing
+  note: Footnoted on the pricing page; applies to the paid tiers.
+  tiers:
+  - annual_agency_spend: $50,000-$150,000
+    rate: 3%
+  - annual_agency_spend: above $150,000
+    rate: 5%
+supply_side_fees:
+  source: https://www.breef.com/faq
+  note: What the AGENCY side of the marketplace pays.
+  join: 0
+  pitch: 0
+  referral_fee:
+    rate: 15%
+    basis: total project value
+    duration: first 12 months of the engagement
+    excludes: hard costs (production, media spend, influencer fees)
+payments:
+  source: https://www.breef.com/faq
+  agency_payout_rail: direct ACH
+  products:
+  - name: Breef(Pay)
+    url: https://www.breef.com/breefpay/apply
+    description: >-
+      Breef's agency now-pay-later payment product; access is via an application
+      form, with no published terms sheet or machine-readable pricing.
+api_plans_published: false
+api_plans_note: >-
+  No API plan, developer tier, call quota or key pricing is published anywhere on the
+  Breef estate. See x-coverage in apis.yml.

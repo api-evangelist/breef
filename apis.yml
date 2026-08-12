@@ -15,7 +15,7 @@ x-type: company
 x-source: harvest:secondary-market
 specificationVersion: '0.20'
 created: '2026-08-08'
-modified: '2026-08-08'
+modified: '2026-08-12'
 tags:
 - Company
 - Marketing
@@ -53,41 +53,64 @@ common:
   url: https://www.breef.com/case-studies
 - type: Careers
   url: https://www.breef.com/careers
+- type: Demo
+  url: https://www.breef.com/demo
+- type: Community
+  url: https://www.breef.com/community-standards
 - type: TermsOfService
   url: https://www.breef.com/terms-of-use
 - type: PrivacyPolicy
   url: https://www.breef.com/privacy-policy
+- type: CookiePolicy
+  url: https://www.breef.com/cookie-policy
 - type: LinkedIn
   url: https://www.linkedin.com/company/breef
+- type: Instagram
+  url: https://www.instagram.com/breefwork
+- type: Plans
+  url: plans/breef-plans-pricing.yml
 - type: DomainSecurity
   url: security/breef-domain-security.yml
 - type: LLMsTxt
   url: llms/breef-llms.txt
 x-enrichment:
-  date: '2026-08-08'
+  date: '2026-08-12'
   status: minimal
-  artifacts_added: 3
+  artifacts_added: 1
   pass: local-v1
 x-coverage:
   state: none
   reason: no-developer-program
   detail: >-
-    Breef ships only an end-user SaaS product — its 483-URL sitemap carries no developer,
-    API, docs or integrations page, no api./developer./docs.breef.com host resolves to a
-    live origin, and the only machine-readable contract on the estate is the Django REST
-    Framework schema behind the customer application at projects.breef.com/api/schema/,
-    which returns 403 "Authentication credentials were not provided" to anonymous callers.
+    Breef ships only an end-user SaaS product: its 483-URL sitemap carries no developer,
+    API, docs or integrations page, no api./developer./docs./app./mcp.breef.com hostname
+    resolves at all, and no npm, PyPI, RubyGems, crates.io or Packagist package exists —
+    the only machine-readable contract on the estate is the customer application's own
+    Django REST Framework schema at projects.breef.com/api/schema/, which negotiates
+    application/vnd.oai.openapi but answers anonymous callers with 403 "Authentication
+    credentials were not provided", so it is an internal app backend rather than a
+    published developer program.
   evidence:
   - url: https://www.breef.com/sitemap.xml
     status: 200
   - url: https://www.breef.com/openapi.json
     status: 404
+  - url: https://www.breef.com/developers
+    status: 404
+  - url: https://www.breef.com/integrations
+    status: 404
   - url: https://www.breef.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.breef.com/.well-known/agent-card.json
     status: 404
   - url: https://www.breef.com/llms.txt
     status: 404
+  - url: https://projects.breef.com/graphql
+    status: 404
   - url: https://projects.breef.com/api/
     status: 200
+  - url: https://projects.breef.com/api/agencies/agency-case-studies
+    status: 401
   - url: https://projects.breef.com/api/schema/
     status: 403
-  checked: '2026-08-08'
+  checked: '2026-08-12'

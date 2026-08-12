@@ -12,16 +12,40 @@
 
 Breef publishes **no public API**. There is no developer portal, API reference, OpenAPI or
 other machine-readable contract, SDK, CLI, webhook catalog, MCP server or agent card on any
-Breef host. The product is consumed through the web application at projects.breef.com by
-brands and agencies; the application's own backend is authenticated and undocumented.
+Breef host. No `api.`, `developer.`, `developers.`, `docs.`, `app.` or `mcp.breef.com`
+hostname resolves. The 483-URL sitemap carries no developer, API, docs or integrations page.
+
+The product is consumed through the web application at `projects.breef.com`. That
+application has a Django REST Framework backend whose router root
+(`https://projects.breef.com/api/`) answers anonymously with a single route entry, and a
+`drf-spectacular` OpenAPI schema endpoint at `https://projects.breef.com/api/schema/` which
+negotiates `application/vnd.oai.openapi` but returns **403 Authentication credentials were
+not provided** to anonymous callers. A schema therefore exists; it is not published, not
+documented, and not offered as a developer product. Individual resources return 401.
+
+There is no published rate limit, no API pricing tier, no sandbox, no status page
+(`breef.statuspage.io` is an unclaimed subdomain that redirects to Atlassian marketing) and
+no first-party package on npm, PyPI, RubyGems, crates.io or Packagist. The `github.com/breef`
+organization is unrelated — it was created in 2014, five years before the company existed.
 
 ## Product
 
 - [How it works](https://www.breef.com/how-it-works): how a brand scopes a project and gets pitches.
 - [Pricing](https://www.breef.com/pricing): Standard (free to scope, $199 on hire), Multiple Projects ($499/yr), Enterprise (custom).
-- [For agencies](https://www.breef.com/for-agencies): free to join and pitch; referral fee on won work.
+- [For agencies](https://www.breef.com/for-agencies): free to join and pitch; 15% referral fee on won work for the first 12 months, excluding hard costs.
+- [Breef(Pay)](https://www.breef.com/breefpay/apply): agency now-pay-later payment product, by application.
 - [Case studies](https://www.breef.com/case-studies): brand outcomes on the platform.
 - [FAQ](https://www.breef.com/faq): platform, fees, vetting and payments questions.
+- [Book a demo](https://www.breef.com/demo)
+
+## Commercial terms
+
+- Brands: free to join, scope and receive pitches; one-time **$199** placement fee on hire.
+- Multiple Projects: **$499/year** for brands running 3+ agency projects a year.
+- Cash back on agency spend: **3%** from $50k-$150k annually, **5%** above $150k annually.
+- Agencies: free to join and pitch; **15%** referral fee on total project value for the
+  first 12 months, excluding hard costs (production, media spend, influencer fees).
+- Agency payouts run over direct ACH.
 
 ## Company
 
@@ -30,6 +54,7 @@ brands and agencies; the application's own backend is authenticated and undocume
 - [Careers](https://www.breef.com/careers)
 - [Contact](https://www.breef.com/contact)
 - [LinkedIn](https://www.linkedin.com/company/breef)
+- [Instagram](https://www.instagram.com/breefwork)
 
 ## Accounts
 
@@ -40,11 +65,14 @@ brands and agencies; the application's own backend is authenticated and undocume
 
 - [Terms of use](https://www.breef.com/terms-of-use)
 - [Privacy policy](https://www.breef.com/privacy-policy)
+- [Cookie policy](https://www.breef.com/cookie-policy)
+- [Community standards](https://www.breef.com/community-standards)
 
 ## API Evangelist profile
 
 - [apis.yml](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/apis.yml): the API Evangelist profile for Breef.
+- [Plans and pricing](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/plans/breef-plans-pricing.yml): the published commercial tiers and marketplace fees.
 - [Domain security](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/security/breef-domain-security.yml): probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture.
-- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/well-known/breef-well-known.yml): recorded result of the RFC 8615 discovery probe.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/well-known/breef-well-known.yml): the recorded RFC 8615 discovery probe plus the full contract-discovery trace.
 
-<!-- generated: 2026-08-08 | method: generated | source: apis.yml + repo artifacts + probed breef.com pages -->
+<!-- generated: 2026-08-12 | method: generated | source: apis.yml + repo artifacts + probed breef.com and projects.breef.com surfaces -->
