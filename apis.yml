@@ -13,7 +13,7 @@ url: https://raw.githubusercontent.com/api-evangelist/breef/refs/heads/main/apis
 image: https://cdn.prod.website-files.com/5e4d24d0d11c7440ba421ee3/695fecd6ab2c876120054eb4_855332ca372b2b87e1b97fff133e4083_breef.com.jpg
 x-type: company
 x-source: harvest:secondary-market
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-08'
 modified: '2026-08-12'
 tags:
