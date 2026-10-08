@@ -109,3 +109,30 @@ api_plans_published: false
 api_plans_note: >-
   No API plan, developer tier, call quota or key pricing is published anywhere on the
   Breef estate. See x-coverage in apis.yml.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - negotiated
+  - subscription
+  units: []
+  plans:
+  - name: Standard
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Multiple Projects
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
